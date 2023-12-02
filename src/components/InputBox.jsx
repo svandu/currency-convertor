@@ -1,8 +1,9 @@
-import {useId} from "react";
+import { useId } from "react";
 
-function InputBox({ label, amount, onAmountChange, onCurrencyChange, currencyOptions = [], selectCurrency = "usd", amountDisable = false, currencyDisable = false, className = "" }) {
+// eslint-disable-next-line react/prop-types
+function InputBox({label, amount, onAmountChange, onCurrencyChange, currencyOptions = [], selectCurrency = "usd", amountDisable = false, currencyDisable = false, className = "" }) {
 
-    const amountInputId = userId()
+    const amountInputId = useId()
 
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex ${className}`}>
